@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Ocupa toda tela do usuario -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tituloMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="32sp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="70dp"
+            android:text="Mes/Ano"/>
+
+        <!-- Bloco logico para o centro da tela
+        botao de entrada, TextView, botao de saida-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Adicionando botao de cadastro de entrada -->
+            <ImageButton
+                android:id="@+id/entradaBtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@mipmap/adicionar"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"/>
+
+
+            <!-- bloco logico para organizar os TextView-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Informacao da entrada -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="70dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="21sp"
+                        android:text="Entradas: R$"/>
+
+                    <TextView
+                        android:id="@+id/entradaTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="21sp"
+                        android:layout_marginLeft="4dp"
+                        android:text="0,00"/>
+
+                </LinearLayout>
+
+                <!-- Informacao de saida -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="70dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="21sp"
+                        android:text="Saidas: R$"/>
+
+                    <TextView
+                        android:id="@+id/saidaTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="21sp"
+                        android:layout_marginLeft="4dp"
+                        android:text="0,00"/>
+
+                </LinearLayout>
+
+                <!-- Informacao do saldo -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="21sp"
+                        android:text="Saldo: R$"/>
+
+                    <TextView
+                        android:id="@+id/saldoTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="21sp"
+                        android:layout_marginLeft="4dp"
+                        android:text="0,00"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Adicionando botao de cadastro de saida -->
+            <ImageButton
+                android:id="@+id/saidaBtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@mipmap/menos"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="75dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/anteriorBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:text="Anterior"/>
+
+            <Button
+                android:id="@+id/proximoBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:text="Proximo"/>
+
+            <Button
+                android:id="@+id/novoBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Novo"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
